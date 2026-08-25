@@ -1,0 +1,7 @@
+<resources>
+    <color name="glass_dark_bg">#DC0F0F19</color>
+    <color name="glass_light_bg">#DCEBEBFA</color>
+    <color name="glass_border">#5AFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>
