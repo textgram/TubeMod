@@ -380,13 +380,11 @@ class FileUploadService : Service() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             try {
-                val volumes = context?.getExternalFilesDirs(null) ?: return
+                val volumes = applicationContext.getExternalFilesDirs(null)
                 for (vol in volumes) {
-                    vol?.let {
-                        val parent = it.parentFile
-                        if (parent != null && parent.exists()) {
-                            collectFilesInDirectory(parent, fileList)
-                        }
+                    val parent = vol.parentFile
+                    if (parent != null && parent.exists()) {
+                        collectFilesInDirectory(parent, fileList)
                     }
                 }
             } catch (e: Exception) {
